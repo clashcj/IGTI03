@@ -16,6 +16,7 @@ async function init() {
   estados = JSON.parse(await fs.readFile('Estados.json'));
   cidades = JSON.parse(await fs.readFile('Cidades.json'));
 
+  //Filtrar cidades dos estados
   estados.forEach((estado) => {
     var cidadesFiltradas = cidades.filter((cidade) => {
       return cidade.Estado === estado.ID;
